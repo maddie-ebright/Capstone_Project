@@ -1,37 +1,63 @@
-# Kent District Library — Digital Collection Forecasting
+# Kent District Library Budget Forecasting and Optimization
 
-**Team project** with Elliot Carlson, Mallory Price, and Eli VanderMeulen (April 2025)
+## Project Overview
 
-## The Problem
+This capstone project was completed in partnership with Kent District Library (KDL) to analyze historical circulation and financial data and develop forecasts for future library usage and spending. The project combined multiple years of monthly data across digital and physical library services to identify trends, seasonal patterns, and opportunities for improved budget allocation.
 
-Kent District Library (20 branches, ~140,000 cardholders in Kent County, MI) asked us to
-assess eBook costs, circulation, and trends to help reexamine their collection budget
-allocations across three platforms: Overdrive (Libby/Kanopy), Hoopla, and their physical
-collection.
+## Objectives
 
-## What We Did
+- Combine and clean multiple financial and circulation datasets
+- Analyze trends in digital and physical library usage
+- Identify seasonal patterns in checkouts and spending
+- Forecast future circulation and costs
+- Compare growth across services such as OverDrive, Hoopla, Kanopy, and physical materials
+- Provide data-driven insights for future budget planning
 
-- Cleaned and organized four years (2021–2024) of checkout, spending, and budget data
-  across all three platforms
-- Analyzed checkout and spending trends by platform, genre, and age group
-- Identified seasonal patterns using time series decomposition in Python
-- Built a Holt-Winters additive forecasting model to project 2025–2027 checkouts and
-  spending for each platform
+## Data Analyzed
+
+The project included approximately four years of monthly data across several categories:
+
+- Physical book checkouts and costs
+- OverDrive checkouts, circulations, and expenditures
+- Hoopla checkouts, circulations, and costs
+- Kanopy circulations and costs
+- Invoice and departmental spending data
+
+More than 50 Excel files were combined, cleaned, and standardized for analysis.
+
+## Methods
+
+The project used multiple time-series and forecasting techniques, including:
+
+- **STL Decomposition:** Used to separate observed data into trend, seasonal, and residual components
+- **Holt-Winters Exponential Smoothing:** Used to forecast datasets with consistent trend and seasonal patterns
+- **SARIMA/SARIMAX Models:** Used for time-series forecasting when autoregressive, differencing, moving-average, and seasonal components were appropriate
+- **Scenario Analysis:** Used to evaluate potential changes in future spending and service allocation
+- **Cost-per-Circulation Analysis:** Used to compare the financial efficiency of different library services
+
+## Tools & Technologies
+
+- Python
+- Pandas
+- NumPy
+- Matplotlib
+- Statsmodels
+- Excel
+- Time-Series Forecasting
+- Data Cleaning and Integration
 
 ## Key Findings
 
-- **Digital usage is outpacing physical**: Overdrive checkouts grew 63% from 2021–2024
-  and Hoopla grew 22%, while physical checkouts grew just 2%
-- **Spending doesn't track usage 1:1**: Hoopla's per-checkout pricing model meant its
-  spending grew faster (46%) than its usage, while Overdrive's fixed-license model kept
-  spending and usage more proportional
-- **Clear seasonality**: All three platforms spike between March and July, tied to reading
-  month, spring break, and summer vacation, visible both in checkout volume and in
-  Hoopla's daily budget cap blocks
-- **Genre mix is stable**: despite rising volume, the breakdown of checkouts by genre
-  stayed consistent. No single genre is driving the growth
+The analysis showed a major shift toward digital library services. OverDrive checkouts increased approximately 63% from 2021 to 2024, while physical book checkouts increased by only about 2%.
 
-## Tools
+The project also identified important differences in the cost structures of digital services. OverDrive operates through licensing models that can allow repeated borrowing, while Hoopla uses a pay-per-circulation model. Because of this structure, Hoopla spending can increase rapidly as usage grows.
 
-Python (pandas, statsmodels for time series decomposition and Holt-Winters forecasting),
-Google Sheets/Excel for initial data organization and charting
+Seasonal decomposition also revealed recurring patterns in library demand, demonstrating that certain periods experience predictable increases or decreases in circulation and spending.
+
+## Conclusion and Recommendation
+
+The project concluded that KDL’s growing digital demand should play a larger role in future budget planning. Forecasting results indicated continued growth in digital services, while physical circulation remained comparatively stable.
+
+Based on these findings, the project recommended using forecasted demand and seasonal usage patterns to guide budget allocation. KDL should continue supporting physical materials while strategically allocating resources toward growing digital services. The analysis also highlighted the importance of closely monitoring pay-per-circulation platforms such as Hoopla because increased usage can lead to faster budget growth than services using reusable licensing structures.
+
+Overall, the project demonstrated how time-series forecasting, cost analysis, and scenario modeling can support more proactive and data-driven library budget decisions.
