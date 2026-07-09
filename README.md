@@ -35,7 +35,3 @@ collection.
 
 Python (pandas, statsmodels for time series decomposition and Holt-Winters forecasting),
 Google Sheets/Excel for initial data organization and charting
-
-## Report
-
-[Full report (PDF)](Final_Report.pdf)
