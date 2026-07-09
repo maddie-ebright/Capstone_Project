@@ -26,10 +26,10 @@ collection.
   spending grew faster (46%) than its usage, while Overdrive's fixed-license model kept
   spending and usage more proportional
 - **Clear seasonality**: All three platforms spike between March and July, tied to reading
-  month, spring break, and summer vacation — visible both in checkout volume and in
+  month, spring break, and summer vacation, visible both in checkout volume and in
   Hoopla's daily budget cap blocks
 - **Genre mix is stable**: despite rising volume, the breakdown of checkouts by genre
-  stayed consistent — no single genre is driving the growth
+  stayed consistent. No single genre is driving the growth
 
 ## Tools
 
